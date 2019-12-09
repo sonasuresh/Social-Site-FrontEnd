@@ -1,0 +1,55 @@
+<app-nav-bar></app-nav-bar>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Update Comment</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="row">
+          <div class="col-6">
+             Comment Text:
+          </div>
+          <div class="col-6">
+            <input type="text" *ngIf="itemloaded" [(ngModel)]="selecteditem.commentText" /><br/><br/>
+          </div>
+        </div>
+        <button type="button" (click)="updateComment()" class="btn btn-primary"
+          style="margin-left:28%;margin-right:auto;display:block;margin-top:10%;margin-bottom:0%"
+          data-dismiss="modal">Update
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="card text-center col-6" *ngFor="let item of mycomments;let i=index">
+ Post Title: {{item.postId.postTitle}}<br/>
+ Comment: {{item.commentText}}
+  <button class="btn btn-danger float-right" (click)="deleteComment(item._id)">Delete this Comment</button>
+<br/><br/><br/>
+<button type="button" class="btn btn-dark" (click)="selectItem(item)" data-toggle="modal"
+data-target="#exampleModal">
+Update Comment
+</button>
+</div> -->
+
+<div class="card text-center col-6" *ngFor="let item of mycomments;let i=index">
+  <div class="card-header">
+    Post Title: {{item.postId.postTitle}}
+  </div>
+  <div class="card-body">
+     <p> Comment: {{item.commentText}}</p>
+     <button type="button" class="btn btn-dark" (click)="selectItem(item)" data-toggle="modal"
+data-target="#exampleModal">
+Update Comment
+</button><br/>
+  </div>
+</div>

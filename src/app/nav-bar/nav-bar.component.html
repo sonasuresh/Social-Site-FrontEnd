@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><b></b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+          <li class="nav-item">
+              <a href="/home" class="nav-link"><b>Feeds</b></a>
+            </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/createposts"><b>Create Posts</b></a>
+        </li>
+        <li class="nav-item">
+          <a href="/myposts" class="nav-link"><b>My Posts</b></a>
+        </li>
+        <li class="nav-item">
+          <a href="/mycomment" class="nav-link"><b>My Comments</b></a>
+        </li>
+        <li>
+            <button type="button" (click)="signOut()"btn-btn-danger>Logout</button> 
+        </li>
+      </ul>
+    </div>
+  </nav>
